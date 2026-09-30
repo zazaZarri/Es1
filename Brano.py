@@ -22,5 +22,13 @@ class Brano:
     def set_durata(self, durata):
         self.durata = durata
 
+    def short_song(self, max_len=15):
+        """Versione breve: titolo abbreviato + durata in mm:ss."""
+        titolo = self.titolo
+        if len(titolo) > max_len:
+            titolo = titolo[:max_len - 3] + "..."
+        minuti, secondi = divmod(self.durata, 60)
+        return f"{titolo} ({minuti}:{secondi:02d})"
+
     def __str__(self):
         return f"Titolo: {self.titolo}, Autore: {self.autore}, Durata: {self.durata}s"                 
