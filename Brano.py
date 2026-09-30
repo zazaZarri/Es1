@@ -23,8 +23,4 @@ class Brano:
         self.durata = durata
 
     def __str__(self):
-        return f"Titolo: {self.titolo}, Autore: {self.autore}, Durata: {self.durata}s"
-
-if __name__ == "__main__":
-    b = Brano("Unravel", "TK", 240)
-    print(b)                    
+        return f"Titolo: {self.titolo}, Autore: {self.autore}, Durata: {self.durata}s"                 
